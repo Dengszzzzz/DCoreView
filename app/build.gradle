@@ -45,4 +45,6 @@ dependencies {
     implementation 'com.contrarywind:Android-PickerView:3.2.5'
     //线程保活
    // implementation 'com.carmelo:keeplive:1.0.0'
+    //webview
+    implementation 'com.just.agentweb:agentweb:3.1.0'
 }

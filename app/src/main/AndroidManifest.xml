@@ -66,6 +66,10 @@
             android:exported="false"
             android:finishOnTaskLaunch="false"
             android:launchMode="singleInstance"/>
+        <activity android:name=".model.webview.WebListActivity" />
+        <activity android:name=".model.webview.AgentWebActivity" />
+        <activity android:name=".model.webview.AgentWebJSActivity" />
+        <activity android:name=".model.webview.WebViewActivity" />
 
     </application>
 
