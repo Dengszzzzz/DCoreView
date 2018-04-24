@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--原版 2fb054 现 249541-->
+    <color name="colorPrimary">#249541</color>
+    <color name="colorPrimaryDark">#249541</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#fff</color>
+    <color name="c_3cc56a">#3cc56a</color>
+    <color name="tab_gray_color">#d5d7e2</color>
+    <color name="main_bg">#e6e6e6</color>
+    <color name="c_999999">#999999</color>
+    <color name="c_333333">#333333</color>
+    <color name="c_2fb054">#249541</color>
+    <color name="c_666666">#666666</color>
+    <color name="c_888888">#888888</color>
+    <color name="c_deff00">#deff00</color>
+    <color name="c_ff4646">#ff4646</color>
+    <color name="c_e5e5e5">#e5e5e5</color>
+    <color name="c_cccccc">#cccccc</color>
+    <color name="c_ffc600">#ffc600</color>
+    <color name="c_fffd46">#fffd46</color>
+    <color name="c_454449">#454449</color>
+    <color name="c_4a4a4a">#4a4a4a</color>
+    <color name="c_feef00">#feef00</color>
+    <color name="c_fe7800">#fe7800</color>
+    <color name="c_008ffe">#008ffe</color>
+    <color name="c_f6ff00">#f6ff00</color>
+    <color name="c_ffba00">#ffba00</color>
+    <color name="c_1efe00">#1efe00</color>
+    <color name="c_008d36">#008d36</color>
+    <color name="c_249541">#249541</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="bg_color_f04339">#f04338</color>
+    <color name="dialog_bg">#70000000</color>
+    <color name="main_bg_color">#eeeeee</color>
+    <color name="text_color_666666">#666666</color>
+    <color name="text_color_333333">#333333</color>
+    <color name="text_color_999999">#999999</color>
+    <color name="bg_color_ef5619">#ef5619</color>
+    <color name="bg_color_ff4646">#ff4646</color>
+    <color name="line">#e5e5e5</color>
+    <color name="translucent">#88000000</color>
+    <color name="blue">#4189e1</color>
+
+    <color name="c_f9e6ba">#f9e6ba</color>
+
+    <color name="text_color_595959">#595959</color>
+    <color name="text_color_000000">#000000</color>
+    <color name="text_color_4d4d4d">#4d4d4d</color>
+    <color name="red">#f65226</color>
+</resources>

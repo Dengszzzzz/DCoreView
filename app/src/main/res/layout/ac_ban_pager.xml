@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/top_view"/>
+
+    <!--
+    app:rollviewpager_hint_color="#7c7c7c" 指示器背景颜色.默认黑色
+app:rollviewpager_hint_alpha="80" 指示器背景透明度。0全透明，255不透明。默认0.
+app:rollviewpager_hint_paddingLeft="16dp" 指示器左边距
+app:rollviewpager_hint_paddingRight="16dp" 指示器右边距
+app:rollviewpager_hint_paddingTop="16dp" 指示器上边距
+app:rollviewpager_hint_paddingBottom="16dp" 指示器下边距
+    -->
+    <!--广告图-->
+    <com.jude.rollviewpager.RollPagerView
+        android:id="@+id/bannerView"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        app:rollviewpager_play_delay="3000"
+        />
+
+</LinearLayout>
