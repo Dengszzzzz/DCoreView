@@ -26,6 +26,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text=""/>
+        android:text="选择图片弹窗的Fr实现方式"/>
+
+    <ImageView
+        android:id="@+id/photoIv"
+        android:scaleType="fitXY"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
 
 </LinearLayout>

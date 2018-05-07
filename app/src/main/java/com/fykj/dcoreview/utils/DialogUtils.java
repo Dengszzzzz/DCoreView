@@ -34,7 +34,7 @@ public class DialogUtils {
             @Override
             public void onClick(View v) {
                 if (dialogSelect != null) {
-                    dialogSelect.onSelected(0);
+                    dialogSelect.onSelected(0,null);
                 }
                 dialog.toggleDialog();
             }
@@ -43,7 +43,7 @@ public class DialogUtils {
             @Override
             public void onClick(View view) {
                 if (dialogSelect != null) {
-                    dialogSelect.onSelected(0);
+                    dialogSelect.onSelected(0,null);
                 }
                 dialog.toggleDialog();
             }
@@ -52,7 +52,7 @@ public class DialogUtils {
             @Override
             public void onClick(View v) {
                 if (dialogSelect != null) {
-                    dialogSelect.onSelected(1);
+                    dialogSelect.onSelected(1,null);
                 }
                 dialog.toggleDialog();
             }
@@ -82,7 +82,7 @@ public class DialogUtils {
             @Override
             public void onClick(View v) {
                 if (dialogSelect != null) {
-                    dialogSelect.onSelected(0);
+                    dialogSelect.onSelected(0,null);
                 }
                 dialog.toggleDialog();
             }
@@ -91,7 +91,7 @@ public class DialogUtils {
             @Override
             public void onClick(View view) {
                 if (dialogSelect != null) {
-                    dialogSelect.onSelected(0);
+                    dialogSelect.onSelected(0,null);
                 }
                 dialog.toggleDialog();
             }
@@ -100,7 +100,7 @@ public class DialogUtils {
             @Override
             public void onClick(View v) {
                 if (dialogSelect != null) {
-                    dialogSelect.onSelected(1);
+                    dialogSelect.onSelected(1,null);
                 }
                 dialog.toggleDialog();
             }

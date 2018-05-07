@@ -52,7 +52,7 @@ public class DialogUActivity extends BaseListShowActivity{
     private void showTwoButtonNotTitleDialog(){
         DialogUtils.showTwoButtonNotTitleDialog(this, "您还没有投资项目", "去创业", false,false, new IDialogSelect() {
             @Override
-            public void onSelected(int i) {
+            public void onSelected(int i, Object o) {
                 switch (i){
                     case 0: //取消
                         break;
@@ -72,7 +72,7 @@ public class DialogUActivity extends BaseListShowActivity{
                 , "年收益值 1000元"
                 , "确定支付", new IDialogSelect() {
                     @Override
-                    public void onSelected(int i) {
+                    public void onSelected(int i, Object o) {
                         if (i == 1) {
                             ToastUtils.showToast("点击了确定按钮");
                         }

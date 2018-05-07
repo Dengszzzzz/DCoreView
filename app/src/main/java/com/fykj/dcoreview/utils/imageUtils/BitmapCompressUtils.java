@@ -67,7 +67,7 @@ public class BitmapCompressUtils {
 
     /**
      * 2.质量压缩
-     *   质量压缩Bitmap,这个方法只会改变图片的存储大小,不会改变bitmap的大小
+     *   质量压缩Bitmap,这个方法只会改变图片的存储大小,不会改变内存的大小(bitmap大小)
      *   最大压缩比例为100
      * @param bitmap  bitmap
      * @param maxFileSize 最大大小

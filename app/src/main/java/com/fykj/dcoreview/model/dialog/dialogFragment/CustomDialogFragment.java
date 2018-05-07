@@ -98,17 +98,17 @@ public class CustomDialogFragment extends BaseDialogFragment {
         switch (view.getId()) {
             case R.id.closeIv:
                 if(mDialogSelect!=null){
-                    mDialogSelect.onSelected(-1);
+                    mDialogSelect.onSelected(-1,null);
                 }
                 break;
             case R.id.cancelTv:
                 if(mDialogSelect!=null){
-                    mDialogSelect.onSelected(0);
+                    mDialogSelect.onSelected(0,null);
                 }
                 break;
             case R.id.confirmTv:
                 if(mDialogSelect!=null){
-                    mDialogSelect.onSelected(1);
+                    mDialogSelect.onSelected(1,null);
                 }
                 break;
         }
