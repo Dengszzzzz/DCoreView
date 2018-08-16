@@ -87,31 +87,4 @@ public class WebViewActivity extends BaseActivity{
         return super.onKeyDown(keyCode, event);
     }
 
-
-
-    //字体颜色设为白色, “p”标签内的字体颜色  “*”定义了字体大小以及行高；
-    private final String CSS_STYLE ="<style>* {font-size:16px;line-height:20px;}p {color:#666666;}</style>";
-    /**
-     * 对图片进行重置大小，宽度就是手机屏幕宽度，高度根据宽度比便自动缩放
-     **/
-    private class MyWebViewClient extends WebViewClient {
-        @Override
-        public void onPageFinished(WebView view, String url) {
-            super.onPageFinished(view, url);
-            view.loadUrl("javascript:(function(){" +
-                    "var objs = document.getElementsByTagName('img'); " +
-                    "for(var i=0;i<objs.length;i++)  " +
-                    "{"
-                    + "var img = objs[i];   " +
-                    "    img.style.maxWidth = '100%'; img.style.height = 'auto';  " +
-                    "}" +
-                    "})()");//重置webview中img标签的图片大小
-        }
-
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            view.loadUrl(url);
-            return true;
-        }
-    }
 }

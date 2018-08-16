@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:drawable="@mipmap/back_icon"
+        android:duration="300"/>
+
+    <item
+        android:drawable="@mipmap/clear_icon"
+        android:duration="300"/>
+
+    <item
+        android:drawable="@mipmap/event_new_merchants"
+        android:duration="300"/>
+
+    <item
+        android:drawable="@mipmap/ic_launcher"
+        android:duration="300"/>
+
+
+</animation-list>

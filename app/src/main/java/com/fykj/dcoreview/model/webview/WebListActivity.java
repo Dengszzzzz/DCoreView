@@ -1,9 +1,12 @@
 package com.fykj.dcoreview.model.webview;
 
+import android.content.Intent;
 import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.fykj.dcoreview.base.BaseListShowActivity;
+import com.fykj.dcoreview.bean.ClazzBean;
+import com.fykj.dcoreview.bean.ParcelableBean;
 import com.fykj.dcoreview.utils.ToastUtils;
 
 /**
@@ -22,6 +25,7 @@ public class WebListActivity extends BaseListShowActivity{
 
     @Override
     protected void initData() {
+
         addClazzBean("WebView Url",WebViewActivity.class);
         addClazzBean("WebView Data",WebViewActivity.class);
         addClazzBean("AgentWeb",AgentWebActivity.class);
@@ -41,6 +45,7 @@ public class WebListActivity extends BaseListShowActivity{
                         break;
                     case 3:
                         ToastUtils.showToast("进入此页面，将无法退出");
+
                         //AgentWebJSActivity.goAgentWebActivity(WebListActivity.this,"AgentWeb JS交互",url);
                         break;
                 }

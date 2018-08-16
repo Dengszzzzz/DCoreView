@@ -51,4 +51,7 @@
     <color name="text_color_000000">#000000</color>
     <color name="text_color_4d4d4d">#4d4d4d</color>
     <color name="red">#f65226</color>
+
+    <color name="uncompleted_color">#A3E0D9</color>
+    <color name="uncompleted_text_color">#F8F8F8</color>
 </resources>

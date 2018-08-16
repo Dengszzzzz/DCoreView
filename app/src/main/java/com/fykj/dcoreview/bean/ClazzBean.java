@@ -1,5 +1,8 @@
 package com.fykj.dcoreview.bean;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by dengzh on 2018/1/17.
  * 类
@@ -33,4 +36,7 @@ public class ClazzBean {
     public void setClazzName(String clazzName) {
         this.clazzName = clazzName;
     }
+
+
+
 }

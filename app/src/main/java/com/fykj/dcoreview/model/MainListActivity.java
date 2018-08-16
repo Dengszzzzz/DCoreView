@@ -3,9 +3,13 @@ package com.fykj.dcoreview.model;
 import android.view.View;
 
 import com.fykj.dcoreview.base.BaseListShowActivity;
+import com.fykj.dcoreview.model.TestAndVerify.TestAndVerifyActivity;
+import com.fykj.dcoreview.model.customview.CustomListActivity;
 import com.fykj.dcoreview.model.dialog.DialogListActivity;
+import com.fykj.dcoreview.model.fingerprint.FingerPrintActivity;
 import com.fykj.dcoreview.model.keeplive.KeepServiceActivity;
 import com.fykj.dcoreview.model.popwindow.PopWindowListActivity;
+import com.fykj.dcoreview.model.recyclerView.RvListActivity;
 import com.fykj.dcoreview.model.viewpager.ViewPagerListActivity;
 import com.fykj.dcoreview.model.webview.WebListActivity;
 
@@ -28,6 +32,11 @@ public class MainListActivity extends BaseListShowActivity{
         addClazzBean("ViewPager", ViewPagerListActivity.class);
         addClazzBean("webView",WebListActivity.class);
         addClazzBean("保活service",KeepServiceActivity.class);
+        addClazzBean("RecyclerView",RvListActivity.class);
+        addClazzBean("基础知识的验证",TestAndVerifyActivity.class);
+        addClazzBean("指纹识别", FingerPrintActivity.class);
+        addClazzBean("自定义View",CustomListActivity.class);
+
         mAdapter.notifyDataSetChanged();
     }
 

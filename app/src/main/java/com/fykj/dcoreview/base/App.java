@@ -7,6 +7,7 @@ import android.view.WindowManager;
 
 import com.fykj.dcoreview.R;
 import com.fykj.dcoreview.utils.CrashHandler;
+import com.fykj.dcoreview.view.recyclerView.MagazineConfig;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.DefaultRefreshFooterCreator;
 import com.scwang.smartrefresh.layout.api.DefaultRefreshHeaderCreator;
@@ -68,8 +69,18 @@ public class App extends Application{
 
         //3.Log依赖库
         KLog.init(true);
+
+        initMzConfig();
     }
 
 
+    public static MagazineConfig mzConfig;
+    public static void initMzConfig(){
+        mzConfig = new MagazineConfig();
+        mzConfig.setItemWidth(screenWidth/3-40);
+        mzConfig.setItemMargin(40);
+        mzConfig.setBlankItemNum(2);  //空白item数量
+        mzConfig.setScrollDuration(3000);
+    }
 
 }
