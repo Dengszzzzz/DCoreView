@@ -39,7 +39,7 @@ public class GlideUtils {
             if (!AppUtils.isUiThread()) return;
             Glide.with(context)
                     .load(url)
-                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                    .diskCacheStrategy(DiskCacheStrategy.ALL)   //在load()和into()之间，可以串连添加各种功能。
                     .into(v);
         }catch (Exception e){
             e.printStackTrace();
@@ -48,7 +48,7 @@ public class GlideUtils {
 
 
     /**
-     * 加载图片 本地
+     * 加载图片 本地资源
      * @param resourceId
      */
     public static void loadImg(Context context, ImageView v,Integer resourceId){

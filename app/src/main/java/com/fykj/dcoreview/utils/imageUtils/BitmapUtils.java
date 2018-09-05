@@ -119,14 +119,13 @@ public class BitmapUtils {
 
     //保存文件到指定路径
     public static boolean saveImageToGallery(Context context, Bitmap bmp) {
-        // 首先保存图片
-        String storePath = Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "nntb";
+        String storePath = Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "DCoreView";
         File appDir = new File(storePath);
         if (!appDir.exists()) {
             appDir.mkdir();
         }
         String fileName = System.currentTimeMillis() + ".jpg";
-        File file = new File(appDir, fileName);
+        File file = new File(appDir, fileName); //在appDir下创建文件
         try {
             FileOutputStream fos = new FileOutputStream(file);
             //通过io流的方式来压缩保存图片

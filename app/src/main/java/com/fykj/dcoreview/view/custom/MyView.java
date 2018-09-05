@@ -42,7 +42,7 @@ public class MyView extends View {
     public MyView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         //第二个参数就是我们在styles.xml文件中的<declare-styleable>标签
-        //即属性集合的标签，在R文件中名称为R.styleable+name
+        //即属性集合的标签，在R文件中名称为R.styleable + name
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.MyView);
 
         //第一个参数为属性集合里面的属性，R文件名称：R.styleable+属性集合名称+下划线+属性名称

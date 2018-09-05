@@ -22,6 +22,8 @@ import com.socks.library.KLog;
 
 public abstract class BaseActivity extends FragmentActivity{
 
+    protected String TAG = getClass().getSimpleName();  //class中获取的this，和new的对象有关，比如这个是得到子类的class
+
     //标题栏
     protected RelativeLayout titleBar;
     protected ImageView ivBack,ivRight;

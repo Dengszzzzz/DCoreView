@@ -33,7 +33,7 @@ public class MyWebView extends WebView{
 
     private void init(){
         getSettings().setJavaScriptEnabled(true);//支持js
-        getSettings().setDefaultTextEncodingName("UTF -8");//设置默认为utf-8
+        getSettings().setDefaultTextEncodingName("UTF-8");//设置默认为utf-8
         setWebViewClient(new MyWebViewClient());
     }
 
@@ -42,7 +42,7 @@ public class MyWebView extends WebView{
      * @param data
      */
     public void loadData(String data){
-       //loadData(CSS_STYLE + data,"text/html","utf-8");  //这种写法无法解决中文乱码
+       //loadData(data,"text/html","utf-8");  //这种写法无法解决中文乱码
         loadData(CSS_STYLE + data, "text/html; charset=UTF-8", null);//这种写法可以正确解码
     }
 

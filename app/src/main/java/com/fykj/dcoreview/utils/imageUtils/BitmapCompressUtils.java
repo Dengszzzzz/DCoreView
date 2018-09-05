@@ -53,6 +53,7 @@ public class BitmapCompressUtils {
                 }else{
                     options.inSampleSize = 1;
                 }
+
                 options.inJustDecodeBounds = false;
                 resizedBitmap = BitmapFactory.decodeFile(filePath, options);
 

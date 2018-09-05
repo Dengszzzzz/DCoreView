@@ -20,6 +20,14 @@ import butterknife.Unbinder;
  * 2.生命周期方法，只有onCreateView()在重写时不用写super方法，其他都需要
  * 3.了解Back Stack(回退栈)的使用和原理
  * 4.常用的getSupportFragmentManager().findFragmentByTag()
+ *
+ *
+ * fragment的好处？
+ * 1）碎片、片段。其目的是为了解决不同屏幕分辩率的动态和灵活UI设计。
+ * 2）将activity分离成多个可重用的组件，每个都有它自己的生命周期和UI。
+ * 3）灵活的UI设计，可以适应于不同的屏幕尺寸。
+ * 4）是一个独立的模块,紧紧地与activity绑定在一起。可以运行中动态地移除、加入、交换等。
+ * 5）切换流畅，轻量切换，替代TabActivity做导航，性能更好。
  */
 
 public abstract class BaseFragment extends Fragment{

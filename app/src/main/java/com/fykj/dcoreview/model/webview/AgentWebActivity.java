@@ -63,4 +63,20 @@ public class AgentWebActivity extends BaseActivity {
                 .ready()
                 .go(webUrl);
     }
+
+    /*@Override
+    protected void onPause() {
+        //mAgentWeb.getWebLifeCycle().onPause();会暂停应用内所有WebView 。
+        //所以最好别加了，不然webView都无法正常工作了
+        agentWebView.getWebLifeCycle().onPause();
+        super.onPause();
+
+    }
+
+    @Override
+    protected void onResume() {
+        agentWebView.getWebLifeCycle().onResume();
+        super.onResume();
+    }*/
+
 }

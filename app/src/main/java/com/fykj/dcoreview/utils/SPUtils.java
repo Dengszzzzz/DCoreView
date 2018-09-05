@@ -11,6 +11,9 @@ import android.content.SharedPreferences;
  * 而apply只是原子的提交到内容，后面有调用apply的函数的将会直接覆盖前面的内存数据，这样从一定程度上提高了很多效率。
  * 3. apply方法不会提示任何失败的提示。
  * 由于在一个进程中，sharedPreference是单实例，一般不会出现并发冲突，如果对提交的结果不关心的话，建议使用apply，当然需要确保提交成功且有后续操作的话，还是需要用commit的。
+ *
+ * 备注：
+ * 可以通过DDMS的【File Explorer】找到data\data\程序包名\shared_prefs目录
  */
 public class SPUtils {
 

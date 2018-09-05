@@ -16,6 +16,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    android {
+        lintOptions {
+            checkReleaseBuilds false
+            // Or, if you prefer, you can continue to check for errors in release builds,
+            // but continue the build even when errors are found:
+            abortOnError false
+        }
+    }
+
 }
 
 dependencies {
@@ -32,6 +41,7 @@ dependencies {
     implementation 'com.github.zhaokaiqiang.klog:library:1.6.0'   //Log工具类
     implementation 'com.android.support:recyclerview-v7:26.+'
     implementation 'com.github.bumptech.glide:glide:3.7.0'
+
     //下拉刷新，上拉加载
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-4'
     //好用的recyclerAdapter 帮助类
@@ -47,4 +57,9 @@ dependencies {
    // implementation 'com.carmelo:keeplive:1.0.0'
     //webview
     implementation 'com.just.agentweb:agentweb:3.1.0'
+    //折线图,增加130KB的包容量
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+    //retrofit网络库
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
 }

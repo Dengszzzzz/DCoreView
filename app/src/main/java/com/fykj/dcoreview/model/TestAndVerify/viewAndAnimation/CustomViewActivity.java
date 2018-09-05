@@ -1,4 +1,4 @@
-package com.fykj.dcoreview.model.TestAndVerify;
+package com.fykj.dcoreview.model.TestAndVerify.viewAndAnimation;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
