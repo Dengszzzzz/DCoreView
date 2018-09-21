@@ -8,7 +8,8 @@ import com.socks.library.KLog;
 
 /**
  * Created by administrator on 2018/8/2.
- *
+ * IntentService 创建了子线程Handler来执行子线程工作，
+ * 也就是onHandleIntent()是执行在子线程的，当完成任务后，该IntentService会自动停止。
  */
 
 public class MyIntentService extends IntentService{

@@ -10,8 +10,9 @@ import android.view.View;
 
 import com.fykj.dcoreview.R;
 import com.fykj.dcoreview.base.App;
+import com.fykj.dcoreview.view.recyclerView.magazineRv.MagazineConfig;
+import com.fykj.dcoreview.view.recyclerView.magazineRv.MagazineView;
 import com.socks.library.KLog;
-import com.socks.library.KLogUtil;
 
 public class MagazineRecyclerView extends RecyclerView {
     /**
@@ -173,15 +174,18 @@ public class MagazineRecyclerView extends RecyclerView {
     public boolean onTouchEvent(MotionEvent ev) {
         switch (ev.getAction()) {
             case MotionEvent.ACTION_MOVE:
-                mScrollDistance += ev.getX() - mLastX;
+                mScrollDistance += ev.getX() - mLastX;  //统计移动的距离
                 mLastX = ev.getX();
+                //如果移动距离 比 item规定的移动弄距离大，则标记为要改变的View
                 if (Math.abs(mScrollDistance) >= mItemMoveDistance) {
-                    //changeItemNum可能为负数
+                    //移动过几个itemView
                     int changeItemNum = (int) (mScrollDistance / mItemMoveDistance);
+                    //真正要滚动的距离
                     mScrollDistance -= changeItemNum * mItemMoveDistance;
+                    //改变为放大视图
                     changeItemToBigStyle(changeItemNum);
                     isHighViewChangedByMove = true;
-
+                    KLog.e("Magazine","Move,changeHigh");
 //                    RingLog.e("Move, changeHigh");
                 }
                 break;
@@ -191,19 +195,22 @@ public class MagazineRecyclerView extends RecyclerView {
                 if (!isHighViewChangedByMove && Math.abs(mScrollDistance) >= mItemMoveDistance / 2) {
                     int changeItemNum = (int) (mScrollDistance / (mItemMoveDistance / 2));
                     mScrollDistance -= changeItemNum * mItemMoveDistance;
-                    changeItemToBigStyle(changeItemNum);
+                    changeItemToBigStyle(changeItemNum);  //放大视图
+                    KLog.e("Magazine","Up,changeHigh");
 //                    RingLog.e("Up, changeHigh");
                 }
 
                 //把当前视图移动到中间位置
                 if (isHighViewChanged) {
                     isHighViewChanged = false;
+                    KLog.e("Magazine","Up, move much, ScrollToHigh");
 //                    RingLog.e("Up, move much, ScrollToHigh");
                     smoothScrollToCurrentItem();
                     if (mCurrentItemListener != null) {
                         mCurrentItemListener.onCurrentItemStop(mCurrentViewPos - mBlankItemNum, mCurrentView);
                     }
                 } else {
+                    KLog.e("Magazine","Up, move little, ScrollToHigh");
 //                    RingLog.e("Up, move little, ScrollToHigh");
                     smoothScrollToCurrentItem();
                 }

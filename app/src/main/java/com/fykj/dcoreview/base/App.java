@@ -7,7 +7,7 @@ import android.view.WindowManager;
 
 import com.fykj.dcoreview.R;
 import com.fykj.dcoreview.utils.CrashHandler;
-import com.fykj.dcoreview.view.recyclerView.MagazineConfig;
+import com.fykj.dcoreview.view.recyclerView.magazineRv.MagazineConfig;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.DefaultRefreshFooterCreator;
 import com.scwang.smartrefresh.layout.api.DefaultRefreshHeaderCreator;

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/top_view"/>
+
+    <Button
+        android:id="@+id/saveBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="保存Object"/>
+
+    <Button
+        android:id="@+id/readBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="读取Object"/>
+
+    <Button
+        android:id="@+id/onTestNarcissusBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="多线程计算水仙花数"/>
+
+
+</LinearLayout>

@@ -1,18 +1,15 @@
 package com.fykj.dcoreview.model.recyclerView.magazineRv;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.fykj.dcoreview.R;
 import com.fykj.dcoreview.base.App;
-import com.fykj.dcoreview.view.recyclerView.MagazineConfig;
-import com.fykj.dcoreview.view.recyclerView.MagazineView;
+import com.fykj.dcoreview.view.recyclerView.magazineRv.MagazineView;
 
 import java.util.List;
 

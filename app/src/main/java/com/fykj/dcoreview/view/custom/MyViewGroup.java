@@ -10,10 +10,12 @@ import com.socks.library.KLog;
 
 /**
  * Created by administrator on 2018/8/3.
- * 总结：
+ * ViewGroup总结：
  1)出了onMeasure(),onDraw(),一般还要重写onLayout()。
- 2)onMeasure(),除了上述相关内容，还要注意以下几点：将所有的子View进行测量，这会触发每个子View的onMeasure函数,
- 要调用measureChildren(widthMeasureSpec,heightMeasureSpec)（注意和measureChild()区分）；调用getChildCount()获取子View数量；调用getChildAt(i)获取子View。
+ 2)onMeasure(),除了上述相关内容，还要注意以下几点：将所有的子View进行测量，
+   这会触发每个子View的onMeasure函数,要调用measureChildren
+   (widthMeasureSpec,heightMeasureSpec)（注意和measureChild()区分）；
+ 调用getChildCount()获取子View数量；调用getChildAt(i)获取子View。
  3)onLayout(),遍历循环子View，调用子View的layout(int l, int t, int r, int b)定位。
 
  */

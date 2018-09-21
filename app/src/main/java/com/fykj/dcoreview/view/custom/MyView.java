@@ -15,10 +15,12 @@ import com.socks.library.KLog;
 
 /**
  * Created by administrator on 2018/8/3.
- * 总结：
+ * View总结：
  * 1)对于自定义view，前两个构造函数就足够了。一般要重写onMeasure(),onDraw()。
- * 2)onMeasure(widthMeasureSpec,heightMeasureSpec),可以用MeasureSpec.size() / .mode()获取size和模式，模式包括unSpecified,AT_MOST,EXACTLY,其中UNSPECIFIED
- * 一般不处理，AT_MOST就是Wrap_content,EXACTLY就是确切的值或者MATCH_PARENT,最后记得调用setMeasuredDimension(width,size);设置宽高
+ * 2)onMeasure(widthMeasureSpec,heightMeasureSpec),可以用MeasureSpec.size() / .mode()获取size和模式，
+ *   模式包括unSpecified,AT_MOST,EXACTLY,其中UNSPECIFIED一般不处理，
+ *   AT_MOST就是Wrap_content,EXACTLY就是确切的值或者MATCH_PARENT,
+ *   最后记得调用setMeasuredDimension(width,size);设置宽高
  * 3)onSizeChanged(),会得到最终的宽高，当view的size有变化时会调用。
  * 4)onDraw(),注意不要在此方法创建新对象，例如Paint不要放在里面new出来，onDraw()需要知道Paint,Canvas。
  * 注意：Invalidate()调用onDraw()不清空画布，上一次的path还回保留，可以用Path.reset()重置。

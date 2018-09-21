@@ -12,6 +12,7 @@ import com.fykj.dcoreview.model.popwindow.PopWindowListActivity;
 import com.fykj.dcoreview.model.recyclerView.RvListActivity;
 import com.fykj.dcoreview.model.viewpager.ViewPagerListActivity;
 import com.fykj.dcoreview.model.webview.WebListActivity;
+import com.javaSummary.module.JavaTestActivity;
 
 /**
  * Created by dengzh on 2018/4/18.
@@ -33,9 +34,10 @@ public class MainListActivity extends BaseListShowActivity{
         addClazzBean("webView",WebListActivity.class);
         addClazzBean("保活service",KeepServiceActivity.class);
         addClazzBean("RecyclerView",RvListActivity.class);
-        addClazzBean("基础知识的验证",TestAndVerifyActivity.class);
         addClazzBean("指纹识别", FingerPrintActivity.class);
         addClazzBean("自定义View",CustomListActivity.class);
+        addClazzBean("Android知识的验证",TestAndVerifyActivity.class);
+        addClazzBean("Java知识的验证",JavaTestActivity.class);
 
         mAdapter.notifyDataSetChanged();
     }

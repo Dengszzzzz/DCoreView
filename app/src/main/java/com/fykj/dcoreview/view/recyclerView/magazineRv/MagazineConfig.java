@@ -1,4 +1,4 @@
-package com.fykj.dcoreview.view.recyclerView;
+package com.fykj.dcoreview.view.recyclerView.magazineRv;
 
 /**
  * Created by administrator on 2018/7/2.

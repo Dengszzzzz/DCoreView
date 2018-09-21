@@ -48,15 +48,21 @@ public class MagazineActivity extends BaseActivity {
         for (int i = 0; i < 10; i++) {
             mList.add(new MagazineBean(0, i + ""));
         }
+        for(int i = 0;i<App.mzConfig.getBlankItemNum();i++){
+            mList.add(new MagazineBean(-1,""));
+        }
+
         adapter = new MagazineAdapter(mList);
         adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                KLog.e("currentPage", "currentPage" + (position - App.mzConfig.getBlankItemNum()));
                 recyclerView.setCurrentPage(position - App.mzConfig.getBlankItemNum());
             }
         });
-        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false));
         recyclerView.setAdapter(adapter);
+        recyclerView.setCurrentPage(0);
 
         recyclerView.setCurrentItemListener(new MagazineRecyclerView.CurrentItemListener() {
             @Override

@@ -1,4 +1,4 @@
-package com.fykj.dcoreview.view.recyclerView;
+package com.fykj.dcoreview.view.recyclerView.magazineRv;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;

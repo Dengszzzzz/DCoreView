@@ -94,6 +94,10 @@
 
         <!--Glide源码解析-->
         <activity android:name=".model.TestAndVerify.imageSummary.GlideActivity" />
+        <activity android:name="com.javaSummary.module.JavaTestActivity" />
+        <activity android:name=".model.recyclerView.simpleRv.SimpleRvActivity" />
+        <activity android:name=".model.recyclerView.simpleRv.CardRvActivity" />
+
         <meta-data
             android:name="com.fykj.dcoreview.model.TestAndVerify.imageSummary.module.MyGlideModule"
             android:value="GlideModule" />
