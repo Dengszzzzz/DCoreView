@@ -30,6 +30,7 @@ public class DialogUActivity extends BaseListShowActivity{
     protected void initData() {
         addClazzBean("两按钮无标题Dialog",null);
         addClazzBean("两按钮带标题Dialog",null);
+        addClazzBean("底部弹出动画Dialog",null);
         mAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
@@ -40,10 +41,17 @@ public class DialogUActivity extends BaseListShowActivity{
                     case 1:
                         showTwoButtonWithTitleDialog();
                         break;
+                    case 2:
+                        showBottomDialog();
+                        break;
                 }
             }
         });
         mAdapter.notifyDataSetChanged();
+    }
+
+    private void showBottomDialog(){
+        DialogUtils.showBottomDialog(this);
     }
 
     /**

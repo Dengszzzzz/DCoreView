@@ -71,7 +71,7 @@ public class DialogFrActivity extends BaseActivity implements TestDialogFragment
      */
     @Override
     public void getTestData(String data) {
-
+        KLog.e("test------" + data);
     }
 
 

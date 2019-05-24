@@ -32,6 +32,8 @@ public class BaseDialog {
     protected boolean isUp;
     protected boolean isMatchWidth;
 
+
+
     public BaseDialog(Context mContext, int layoutResId, int gravity, boolean cancelOnTouchOutside) {
         this(mContext,layoutResId,gravity,cancelOnTouchOutside,false);
     }
@@ -54,35 +56,24 @@ public class BaseDialog {
     }
 
     private void initView(){
+        mDialog = new Dialog(mContext, R.style.transparentFrameWindowStyle); //创建半透明背景的Dialog
+        mDialog.setContentView(layoutResId);   //设置布局id
+        mDialog.setCanceledOnTouchOutside(cancelOnTouchOutside);  //是否可以触摸外部取消
+        mDialog.getWindow().setGravity(gravity);  //显示位置
         if(!isUp){
-            mDialog = new Dialog(mContext);
-            mDialog.setContentView(layoutResId);
-            mDialog.setCanceledOnTouchOutside(cancelOnTouchOutside);
-            mDialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
-            mDialog.getWindow().setGravity(gravity);
+            //常规宽高适配
             WindowManager.LayoutParams params = mDialog.getWindow().getAttributes();
             params.width = LinearLayout.LayoutParams.WRAP_CONTENT;
             params.height = LinearLayout.LayoutParams.WRAP_CONTENT;
             mDialog.getWindow().setAttributes(params);
         }else{
-            View view = View.inflate(mContext,layoutResId, null);
-            mDialog = new Dialog(mContext, R.style.transparentFrameWindowStyle);
-            mDialog.setContentView(view, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                    ViewGroup.LayoutParams.WRAP_CONTENT));
-            Window window = mDialog.getWindow();
             // 设置显示动画
-            window.setWindowAnimations(R.style.main_menu_animstyle);
-            WindowManager.LayoutParams wl = window.getAttributes();
-            wl.x = 0;
-            wl.y = window.getWindowManager().getDefaultDisplay().getHeight();
-            // 以下这两句是为了保证按钮可以水平满屏
-            wl.width = ViewGroup.LayoutParams.MATCH_PARENT;
-            wl.height = ViewGroup.LayoutParams.WRAP_CONTENT;
-
-            // 设置显示位置
-            mDialog.onWindowAttributesChanged(wl);
-            // 设置点击外围解散
-            mDialog.setCanceledOnTouchOutside(cancelOnTouchOutside);
+            mDialog.getWindow().setWindowAnimations(R.style.main_menu_animstyle);
+            //宽填满，高适配
+            WindowManager.LayoutParams params = mDialog.getWindow().getAttributes();
+            params.width = LinearLayout.LayoutParams.MATCH_PARENT;
+            params.height = LinearLayout.LayoutParams.WRAP_CONTENT;
+            mDialog.getWindow().setAttributes(params);
         }
     }
 

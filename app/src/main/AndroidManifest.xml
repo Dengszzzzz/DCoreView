@@ -97,6 +97,14 @@
         <activity android:name="com.javaSummary.module.JavaTestActivity" />
         <activity android:name=".model.recyclerView.simpleRv.SimpleRvActivity" />
         <activity android:name=".model.recyclerView.simpleRv.CardRvActivity" />
+        <activity android:name="com.fykj.rxjava.RxJavaListActivity" />
+        <activity android:name="com.fykj.rxjava.RxCreateActivity" />
+        <activity android:name="com.fykj.rxjava.RxTransformActivity" />
+        <activity android:name="com.fykj.rxjava.RxCombineActivity" />
+        <activity android:name="com.fykj.rxjava.RxFunctionActivity" />
+        <activity android:name="com.fykj.rxjava.RxConditionActivity" />
+        <activity android:name="com.fykj.rxjava.RxFilterActivity" />
+        <activity android:name="com.fykj.rxjava.FlowableActivity" />
 
         <meta-data
             android:name="com.fykj.dcoreview.model.TestAndVerify.imageSummary.module.MyGlideModule"

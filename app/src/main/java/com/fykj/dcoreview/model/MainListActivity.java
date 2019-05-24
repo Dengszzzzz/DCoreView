@@ -12,6 +12,7 @@ import com.fykj.dcoreview.model.popwindow.PopWindowListActivity;
 import com.fykj.dcoreview.model.recyclerView.RvListActivity;
 import com.fykj.dcoreview.model.viewpager.ViewPagerListActivity;
 import com.fykj.dcoreview.model.webview.WebListActivity;
+import com.fykj.rxjava.RxJavaListActivity;
 import com.javaSummary.module.JavaTestActivity;
 
 /**
@@ -38,7 +39,7 @@ public class MainListActivity extends BaseListShowActivity{
         addClazzBean("自定义View",CustomListActivity.class);
         addClazzBean("Android知识的验证",TestAndVerifyActivity.class);
         addClazzBean("Java知识的验证",JavaTestActivity.class);
-
+        addClazzBean("RxJava2 学习",RxJavaListActivity.class);
         mAdapter.notifyDataSetChanged();
     }
 

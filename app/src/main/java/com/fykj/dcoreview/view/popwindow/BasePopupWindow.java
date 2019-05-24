@@ -62,7 +62,6 @@ public class BasePopupWindow{
     }
 
 
-
     public int getWidth() {
         return mWidth;
     }
@@ -96,31 +95,34 @@ public class BasePopupWindow{
     }
 
     private PopupWindow build(){
+        //1.创建View
         if(mContentView == null){
             mContentView = LayoutInflater.from(mContext).inflate(mResLayoutId,null);
         }
+        //2.创建PopupWindow，继承SupportPopWindow是为了解决 系统 7.0以上 showAsDropDown 置顶问题
         if(mWidth != 0 && mHeight!=0 ){
             mPopupWindow = new SupportPopupWindow(mContentView,mWidth,mHeight);
         }else{
-            mPopupWindow = new SupportPopupWindow(mContentView, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            mPopupWindow = new SupportPopupWindow(mContentView,
+                    ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         }
+        //设置动画
         if(mAnimationStyle!=-1){
             mPopupWindow.setAnimationStyle(mAnimationStyle);
         }
-
-        apply(mPopupWindow);//设置一些属性
-
+        //设置一些属性
+        apply(mPopupWindow);
         mPopupWindow.setFocusable(mIsFocusable);
         mPopupWindow.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         mPopupWindow.setOutsideTouchable(mIsOutside);
 
         if(mWidth == 0 || mHeight == 0){
-            mPopupWindow.getContentView().measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
+            mPopupWindow.getContentView().measure(View.MeasureSpec.UNSPECIFIED,
+                    View.MeasureSpec.UNSPECIFIED);
             //如果外面没有设置宽高的情况下，计算宽高并赋值
             mWidth = mPopupWindow.getContentView().getMeasuredWidth();
             mHeight = mPopupWindow.getContentView().getMeasuredHeight();
         }
-
         mPopupWindow.update();
 
         return mPopupWindow;

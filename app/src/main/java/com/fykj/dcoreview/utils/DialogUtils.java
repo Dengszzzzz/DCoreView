@@ -1,8 +1,12 @@
 package com.fykj.dcoreview.utils;
 
 import android.app.Activity;
+import android.content.Context;
+import android.support.v7.app.AlertDialog;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.TextView;
 
 import com.fykj.dcoreview.R;
 import com.fykj.dcoreview.model.dialog.IDialogSelect;
@@ -107,6 +111,28 @@ public class DialogUtils {
         });
         //3.显示dialog
         dialog.toggleDialog();
+    }
+
+    public static void showBottomDialog(Context context){
+        final BaseDialog dialog = new BaseDialog(context, R.layout.dialog_select_photo2, Gravity.BOTTOM, true,true);
+        dialog.toggleDialog();
+    }
+
+
+
+
+    public static void showCustomAlertDialog(Context context){
+
+        //自定义View的AlertDialog
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        //通过LayoutInflater来加载一个xml布局文件作为一个View对象
+        View view = LayoutInflater.from(context).inflate(R.layout.dialog_two_button_title,null);
+        //设置view为弹窗的Content
+        builder.setView(view);
+        //控件id从View获取
+        TextView titleTv = view.findViewById(R.id.titleTv);
+
+        builder.show();
     }
 
 }

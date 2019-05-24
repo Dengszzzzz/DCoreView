@@ -33,12 +33,10 @@ public class TestDialogFragment extends DialogFragment implements DialogInterfac
         super.onAttach(activity);
     }
 
-
-
     //从生命周期的顺序而言，先执行onCreateDialog()，后执行onCreateView()
     //不需自定义view  可以试用onCreateDialog();
     //别同时使用onCreatView和onCreatDialog方法
-    /*@Override
+  /*  @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("用户申明")
@@ -51,6 +49,23 @@ public class TestDialogFragment extends DialogFragment implements DialogInterfac
 
     }*/
 
+    /**
+     * onCreate()的时候可以设置Dialog相关的风格和属性
+     * @param savedInstanceState
+     */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setCancelable(true);
+    }
+
+    /**
+     * onCreateView（）的时候设置View相关
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -66,5 +81,4 @@ public class TestDialogFragment extends DialogFragment implements DialogInterfac
     public interface DataCallback {
         void getTestData(String data);
     }
-
 }
